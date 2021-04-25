@@ -2,55 +2,51 @@
 ### 机票  
 ### 住宿  
 ### 租车  
-## 相关路线  
-* 呼伦贝尔大环线  
-* 呼伦贝尔南线
-* 呼伦贝尔休闲线
-* 呼伦贝尔北线
-* 锡林郭勒线
+
 ### 1. 呼伦贝尔大环线  
 #### 行程图  
 #### 行程表格  
-日期 景点 活动  
 <table>
 	<tr>
 	    <th>日期</th>
 	    <th>时间点</th>
 	    <th>地点</th>
 	    <th>项目</th>
-	    <th>备注</th>  
+	    <th>饮食</th>
+	    <th>备注</th>
 	</tr >
 	<tr >
 	    <td rowspan="3">第一天</td>
-	    <td> </td>
+	    <td> 上午</td>
 	    <td>海拉尔</td>  
 	    <td>出发</td>
+	    <td bgcolor="#00FF00">待定</td>
 	    <td> </td>
 	</tr>
 	<tr>
-	    <td> </td>
+	    <td> 上午</td>
 	    <td>金帐汗蒙古部落</td>
 	    <td></td>
 	    <td></td>
 	</tr>
 	<tr>
-	    <td ></td>
+	    <td >下午</td>
 	    <td >莫日格勒河</td>
 	    <td >住宿恩和</td>
 	    <td ></td>
 	</tr>
 	<tr>
 	    <td rowspan="3">第二天</td>
-	    <td> </td>
+	    <td> 上午</td>
 	    <td>莫尔道噶国家森林公园</td>  
 	    <td>恩和出发</td>
 	    <td></td>
 	</tr>
 	<tr>
-	    <td ></td>
+	    <td >下午</td>
 	    <td >白鹿岛</td>
 	    <td ></td>
-	    <td ></td>
+	    <td >在莫尔道嘎公园内；</td>
 	</tr>
 	<tr>
 	    <td ></td>
@@ -107,55 +103,4 @@
 	</tr>
 </table>  
 
-### 2. * 呼伦贝尔南线  
-#### 行程图
-#### 行程表格
-<table>
-	<tr>
-	    <th>日期</th>
-	    <th>时间点</th>
-	    <th>地点</th>
-	    <th>项目</th>
-	    <th>备注</th>  
-	</tr >
-	<tr >
-	    <td rowspan="1">第一天</td>
-	    <td>全天</td>
-	    <td>红花尔基樟子松国家森林公园</td>  
-	    <td> </td>
-	    <td>夜宿阿尔山</td>
-	</tr>
-	<tr>
-	    <td>第二天 </td>
-	    <td>全天</td>
-	    <td>阿尔山国家森林公园</td>
-	    <td></td>
-	    <td>夜宿阿尔山</td>
-	</tr>
-	<tr>
-	    <td rowspan="1">第三天</td>
-	    <td >全天</td>
-	    <td >甘珠尔庙</td>
-	    <td ></td>
-	    <td >夜宿满洲里</td>
-	</tr>
-	<tr>
-	    <td rowspan="3">第四天</td>
-	    <td>上午</td>
-	    <td>国门</td>  
-	    <td></td>
-	    <td></td>
-	</tr>
-	<tr>
-	    <td >上午</td>
-	    <td >俄罗斯套娃广场</td>
-	    <td ></td>
-	    <td ></td>
-	</tr>
-	<tr>
-	    <td >下午</td>
-	    <td >呼伦湖</td>
-	    <td ></td>
-	    <td >夜回海拉尔</td>
-	</tr>
-</table>  
+
