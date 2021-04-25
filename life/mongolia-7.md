@@ -33,7 +33,7 @@
 
 ### 1. 呼伦贝尔大环线  
 #### 行程图  
-![avatar](https://github.com/kin122/duoankin.github.io/blob/main/life/7-mongolia-01.png)
+![大环线行程概图](https://github.com/kin122/duoankin.github.io/blob/main/life/7-mongolia-01.png)
 1. 海拉尔到恩和 直达200公里+ 3小时
 2. 恩和到室韦 直达66公里 1小时
 3. 室韦至海拉尔 直达400公里 6小时
