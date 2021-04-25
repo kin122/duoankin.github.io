@@ -99,12 +99,20 @@
 	    <td >阿尔山往返</td>
 	</tr>
 	<tr>
-	    <td rowspan="1">第七天</td>
+	    <td rowspan="2">第七天</td>
 	    <td >全天</td>
 	    <td >鄂温克博物馆</td>
 	    <td ></td>
 	    <td >待定</td>
 	    <td >返回海拉尔</td>
+	</tr>
+	<tr>
+	    
+	    <td >全天</td>
+	    <td ></td>
+	    <td ></td>
+	    <td >待定</td>
+	    <td >返回齐齐哈尔</td>
 	</tr>
 </table>  
 
