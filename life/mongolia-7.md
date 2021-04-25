@@ -20,39 +20,44 @@
 	    <td> 上午</td>
 	    <td>海拉尔</td>  
 	    <td>出发</td>
-	    <td>*待定*</td>
+	    <td>待定</td>
 	    <td> </td>
 	</tr>
 	<tr>
 	    <td> 上午</td>
 	    <td>金帐汗蒙古部落</td>
 	    <td></td>
+	    <td>路上</td>
 	    <td></td>
 	</tr>
 	<tr>
 	    <td >下午</td>
 	    <td >莫日格勒河</td>
-	    <td >住宿恩和</td>
 	    <td ></td>
+	    <td >恩和</td>
+	    <td >住宿恩和</td>
 	</tr>
 	<tr>
 	    <td rowspan="3">第二天</td>
 	    <td> 上午</td>
 	    <td>莫尔道噶国家森林公园</td>  
 	    <td>恩和出发</td>
-	    <td></td>
+	    <td>待定</td>
+		<td></td>
 	</tr>
 	<tr>
 	    <td >下午</td>
 	    <td >白鹿岛</td>
 	    <td ></td>
-	    <td >在莫尔道嘎公园内；</td>
+		<td >路上</td>
+	    <td >在莫尔道嘎公园内</td>
 	</tr>
 	<tr>
-	    <td ></td>
+	    <td >晚上</td>
 	    <td >室韦俄罗斯民族乡</td>
 	    <td >住宿</td>
-	    <td ></td>
+	    <td >室韦</td>
+		<td ></td>
 	</tr>
 	<tr>
 	    <td rowspan="1">第三天</td>
