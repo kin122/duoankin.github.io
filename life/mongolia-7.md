@@ -9,9 +9,10 @@
 日期 景点 活动  
 <table>
 	<tr>
-	    <th>属性</th>
-	    <th>属性值</th>
-	    <th>描述</th>  
+	    <th>日期</th>
+	    <th>时间点</th>
+	    <th>行程安排</th>  
+	    <th>备注</th>  
 	</tr >
 	<tr >
 	    <td rowspan="9">type</td>
