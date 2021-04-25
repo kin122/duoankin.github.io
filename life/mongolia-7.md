@@ -20,7 +20,7 @@
 	    <td> 上午</td>
 	    <td>海拉尔</td>  
 	    <td>出发</td>
-	    <td bgcolor="#00FF00">待定</td>
+	    <td bgcolor="#EA0000">待定</td>
 	    <td> </td>
 	</tr>
 	<tr>
