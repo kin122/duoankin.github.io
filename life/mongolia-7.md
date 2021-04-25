@@ -39,7 +39,7 @@
 	</tr>
 	<tr>
 	    <td rowspan="2">第二天</td>
-	    <td> 上午</td>
+	    <td>白天</td>
 	    <td>莫尔道噶国家森林公园</td>  
 	    <td>白鹿岛</td>
 	    <td>待定</td>
@@ -56,9 +56,9 @@
 	    <td rowspan="1">第三天</td>
 	    <td >全天</td>
 	    <td >额尔古纳河湿地</td>
-	    <td >从室韦出发返回海拉尔</td>
-	    <td >路上；海拉尔待定</td>
 	    <td ></td>
+	    <td >路上；海拉尔待定</td>
+	    <td >从室韦出发返回海拉尔</td>
 	</tr>
 	<tr>
 	    <td rowspan="3">第四天</td>
@@ -96,7 +96,7 @@
 	    <td >阿尔山国家森林公园</td>
 	    <td ></td>
 	    <td >阿尔山待定</td>
-	    <td ></td>
+	    <td >阿尔山往返</td>
 	</tr>
 	<tr>
 	    <td rowspan="1">第七天</td>
