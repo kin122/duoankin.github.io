@@ -53,9 +53,9 @@
 	    <td rowspan="3">第一天</td>
 	    <td> 上午</td>
 	    <td>海拉尔</td>  
-	    <td>出发</td>
+	    <td></td>
 	    <td>待定</td>
-	    <td> </td>
+	    <td>海拉尔出发 </td>
 	</tr>
 	<tr>
 	    <td> 上午</td>
@@ -82,9 +82,9 @@
 	<tr>
 	    <td >晚上</td>
 	    <td >室韦俄罗斯民族乡</td>
-	    <td >住宿</td>
-	    <td >室韦待定</td>
 	    <td ></td>
+	    <td >室韦待定</td>
+	    <td >住宿</td>
 	</tr>
 	<tr>
 	    <td rowspan="1">第三天</td>
@@ -112,17 +112,17 @@
         <tr>
 	    <td >下午至晚上</td>
 	    <td >满洲里</td>
-	    <td >国门，套娃广场，住宿</td>
+	    <td >国门，套娃广场</td>
 	    <td >满洲里待定</td>
-	    <td ></td>
+	    <td >夜宿满洲里</td>
 	</tr>
 	<tr>
 	    <td rowspan="1">第五天</td>
 	    <td >全天</td>
 	    <td >甘珠尔庙</td>
-	    <td ></td>
+	    <td >途径诺门罕战争遗址</td>
 	    <td >甘珠尔庙待定</td>
-	    <td >下午经过诺门罕战争遗址；夜宿阿尔山；</td>
+	    <td >满洲里出发；夜宿阿尔山；</td>
 	</tr>
 	<tr>
 	    <td rowspan="1">第六天</td>
