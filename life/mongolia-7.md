@@ -28,6 +28,12 @@
 	    <td></td>
 	    <td>20 </td>
 	</tr>
+	<tr >
+	    <td> </td>
+	    <td>莫日格勒河</td>  
+	    <td></td>
+	    <td>无 </td>
+	</tr>
 </table>
 
 ### 预备行程
