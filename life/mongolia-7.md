@@ -106,7 +106,7 @@
 	</tr >
 	<tr>
 	    <td rowspan="1">第一天</td>
-	    <td> 上午</td>
+	    <td> 全天</td>
 	    <td>金帐汗蒙古部落</td>
 	    <td>莫日格勒河边上</td>
 	    <td>路上</td>
