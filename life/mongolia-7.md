@@ -30,9 +30,39 @@
 	</tr>
 	<tr >
 	    <td> </td>
-	    <td>莫日格勒河</td>  
+	    <td>莫尔道噶国家森林公园</td>  
 	    <td></td>
-	    <td>无 </td>
+	    <td>160疑似 </td>
+	</tr>
+	<tr >
+	    <td> </td>
+	    <td>额尔古纳河湿地</td>  
+	    <td></td>
+	    <td>65 </td>
+	</tr>
+	<tr >
+	    <td> </td>
+	    <td>呼伦湖</td>  
+	    <td></td>
+	    <td>40 </td>
+	</tr>
+	<tr >
+	    <td> </td>
+	    <td>甘珠尔庙 </td>  
+	    <td></td>
+	    <td>30 </td>
+	</tr>
+	<tr >
+	    <td> </td>
+	    <td>甘珠尔庙 </td>  
+	    <td></td>
+	    <td>30 </td>
+	</tr>
+	<tr >
+	    <td> </td>
+	    <td>阿尔山国家森林公园 </td>  
+	    <td></td>
+	    <td>180 </td>
 	</tr>
 </table>
 
@@ -74,33 +104,19 @@
 	    <th>饮食</th>
 	    <th>备注</th>
 	</tr >
-	<tr >
-	    <td rowspan="3">第一天</td>
-	    <td> 上午</td>
-	    <td>海拉尔</td>  
-	    <td></td>
-	    <td>待定</td>
-	    <td>海拉尔出发 </td>
-	</tr>
 	<tr>
+	    <td rowspan="1">第一天</td>
 	    <td> 上午</td>
 	    <td>金帐汗蒙古部落</td>
-	    <td></td>
+	    <td>莫日格勒河边上</td>
 	    <td>路上</td>
-	    <td></td>
-	</tr>
-	<tr>
-	    <td >下午</td>
-	    <td >莫日格勒河</td>
-	    <td ></td>
-	    <td >恩和待定</td>
-	    <td >住宿恩和</td>
+	    <td>海拉尔出发；住宿恩和</td>
 	</tr>
 	<tr>
 	    <td rowspan="2">第二天</td>
 	    <td>白天</td>
 	    <td>莫尔道噶国家森林公园</td>  
-	    <td>白鹿岛</td>
+	    <td>大兴安岭；白鹿岛</td>
 	    <td>待定</td>
 	    <td>恩和出发</td>
 	</tr>
@@ -115,7 +131,7 @@
 	    <td rowspan="1">第三天</td>
 	    <td >全天</td>
 	    <td >额尔古纳河湿地</td>
-	    <td ></td>
+	    <td >根河</td>
 	    <td >路上；海拉尔待定</td>
 	    <td >从室韦出发返回海拉尔</td>
 	</tr>
@@ -145,7 +161,7 @@
 	    <td rowspan="1">第五天</td>
 	    <td >全天</td>
 	    <td >甘珠尔庙</td>
-	    <td >途径诺门罕战争遗址</td>
+	    <td >清代寿宁寺；途径诺门罕战争遗址</td>
 	    <td >甘珠尔庙待定</td>
 	    <td >满洲里出发；夜宿阿尔山；</td>
 	</tr>
