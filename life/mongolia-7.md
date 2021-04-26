@@ -19,8 +19,14 @@
 	<tr>
 		<th>日期</th>
 		<th>地点</th>
-		<th>门票</th>
+		<th>门票是否预定</th>
 		<th>价格</th>
+	</tr>
+	<tr >
+	    <td> </td>
+	    <td>金帐汗蒙古部落</td>  
+	    <td></td>
+	    <td>20 </td>
 	</tr>
 </table>
 
