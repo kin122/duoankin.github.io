@@ -1,4 +1,5 @@
 socket 套接字，IPC方法的一种，通过网络连接让多个进程建立通信并相互传递数据，使得通信双方是否在同一台服务器变得无关紧要，使得通信端的位置透明化。  
+### socket的定义
 linux中存在的socket调用  
 `int socket(int domain,int type,int protocol)`  
 三个参数分别代表通信域、类型和所用协议：
@@ -18,10 +19,29 @@ socket通讯有无连接：
 * 在网络协议中，各个类型对应的协议关系如下：SOCK_DGRAM-UDP;SOCK_RAM-IPv4/IPv6;SOCK_SEQPACKET-SCTP;SOCK_STREAM-TCP/SCTP
 * unix通信域中，除了SOCK_RAW是无效外都有效
 
+### socket的调用
 socket方法的返回值是socket实例唯一标识符的文件描述符，一旦得到对应的标识符，就可以调用其他系统调用来进行各种相关操作，比如绑定和监听端口、发送或者接收数据等等。  
 socket接口和TCP/IP协议栈一样是linux系统内核的一部分。  
 在程序使用中，socket的调用链如下：应用层的应用程序调用socket接口，socket调用传输层的tcp/udp/sctp的协议，再调用网络互联层的IP  
-此处主要实现了基于TCP的客户端和服务端通过socket接口建立tcp连接并进行通信的情形。
-![基于TCP协议栈的socket通信流程](https://github.com/kin122/duoankin.github.io/blob/main/golang/go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E5%9F%BA%E4%BA%8ETCP%E5%8D%8F%E8%AE%AE%E6%A0%88%E7%9A%84socket%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B.webp)
 
+### golang实现socket
+此处主要实现了基于TCP的客户端和服务端通过socket接口建立tcp连接并进行通信的情形。
+![基于TCP协议栈的socket通信流程](https://github.com/kin122/duoankin.github.io/blob/main/golang/go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E5%9F%BA%E4%BA%8ETCP%E5%8D%8F%E8%AE%AE%E6%A0%88%E7%9A%84socket%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B.webp)  
+
+为了实现服务端和客户端程序，需要使用标准库代码包net中的API  
+##### net相关函数
+`func Listen(net,laddr string)(Listerner,error)`  
+* 第一个参数代表的是监听地址的协议，这个参数必须是面向流的协议，因此只能是（tcp/tcp4/tcp6/unix/unixpacket中的一个，*udp则使用ListenUDP解决*）
+* 第二个参数则是local address，格式为host:port
+
+`conn,err:=Listener.Accept()`  
+调用Accept方法时，流程会被阻塞，知道某个客户端程序与当前程序建立tcp连接。Accept方法返回两个结果值，第一个代表当前TCP连接的net.Conn类型，第二个依旧是error
+
+`func Dial(network,address string)(Conn,error)` 
+Dial函数用于向指定的网络地址发送链接建立申请，network参数和net.Listen函数的第一个参数net的含义类似，但是比后者拥有更多的可选值。第二个参数就是IP:PORT，只是此处是远程地址。Dial函数用于客户端连接建立。其代码类似于`conn,err:=net.Dial("tcp","127.0.0.1:8085")`    
+
+`func DialTimeout(network,address string,timeout time.Duration)(Conn,error)`  
+DialTimeout是专门针对调整网络超时时间设置的方法，time.Duration类型可以这样设置：`conn,err=net.DailTimeout("tcp","127.0.0.1:8085",2*time.Second)`  
+
+尽管socket相关的API使用中会有阻塞式的特性，但是在底层socket接口中使用的是非阻塞式的处理方法，有着部分读部分写的特性。**具体底层逻辑待解读。**  
 
