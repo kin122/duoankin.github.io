@@ -29,7 +29,7 @@ socket接口和TCP/IP协议栈一样是linux系统内核的一部分。
 ![基于TCP协议栈的socket通信流程](https://github.com/kin122/duoankin.github.io/blob/main/golang/go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E5%9F%BA%E4%BA%8ETCP%E5%8D%8F%E8%AE%AE%E6%A0%88%E7%9A%84socket%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B.webp)  
 
 为了实现服务端和客户端程序，需要使用标准库代码包net中的API  
-##### net相关函数
+#### net相关函数
 `func Listen(net,laddr string)(Listerner,error)`  
 * 第一个参数代表的是监听地址的协议，这个参数必须是面向流的协议，因此只能是（tcp/tcp4/tcp6/unix/unixpacket中的一个，*udp则使用ListenUDP解决*）
 * 第二个参数则是local address，格式为host:port
@@ -44,4 +44,56 @@ Dial函数用于向指定的网络地址发送链接建立申请，network参数
 DialTimeout是专门针对调整网络超时时间设置的方法，time.Duration类型可以这样设置：`conn,err=net.DailTimeout("tcp","127.0.0.1:8085",2*time.Second)`  
 
 尽管socket相关的API使用中会有阻塞式的特性，但是在底层socket接口中使用的是非阻塞式的处理方法，有着部分读部分写的特性。**具体底层逻辑待解读。**  
+
+#### net.Conn类型
+net.Conn类型的方法集合中包含了一个连接上做的所有事情。  
+##### Read方法
+`Read(b []byte)(n int,err error)`  
+传递给Read方法的参数值是一个不包含任何非零值元素的切片值。完整的使用如下：  
+```
+var dataBuffer bytes.Buffer
+b := make([]byte,10)
+for {
+    n,err := conn.Read(b)
+    if err!=nil{
+        if err == io.EOF{
+            fmt.Printf("the connection is closed\n")
+            conn.Close()
+        }else{
+            fmt.Printf("read error:%s\n",err)
+        }
+        break
+    }
+    dataBuffer.Write(b[:n])
+}
+```
+在实际情况中，可以使用bufio.NewReader接口获取数据的切分。  
+##### Write方法
+`Write(b []byte)(n int,err error)`  
+net.Conn类型式一个io.Writer接口的实现类型，所以，可以用bufio.NewWriter函数使用  
+`writer := bufio.NewWriter(conn)`
+注意写入的数据size大小  
+##### Close方法
+任何已经被关闭的连接再次被调用都会返回这样的提示：`use of closed network connection`  
+一旦调用close方法，即便连接还在被read或者write，连接也会立即结束执行并返回非nil或者error的类型。
+##### LocalAddr和RemoteAddr方法
+本地地址和远程地址有两个子方法  
+`conn.LocalAddr().Network()`  
+network方法返回的是连接使用的网络协议。  
+`conn.LocalAddr().String()`  
+string方法返回的是连接的ip地址。  
+##### SetDeadline/SetReadDeadline/SetWriteDeadline方法
+三个方法都只接收一个time.Time类型值作为参数，并返回一个error类型值。SetDeadline方法会设定当前连接上的I/O（包括但不限于读与写）操作。此处的时间为绝对时间，若是操作到时间长度则会被立即结束执行，并返回`i/o timeout`.合理的代码示例如下：
+```
+b := make([]byte,10)
+for {
+    conn.SetDeadline(time.Now().Add(2*time.Second))
+    n,err:=conn.Read(b)
+}
+```
+取消则使用time.Time{}的结构体默认零值处理。  
+`conn.SetDeadline(time.Time{})`  
+SetDeadline等方法的注意点：
+1. 写操作的超时，不一定代表写操作没有成功，在超时前write方法背后的程序可能已经将数据写入了socket的缓冲区。这种情况下，方法返回结果的第一个值就表示操作超时前被真正写入的数据的字节数量。
+2. SetDeadline方法的调用相当于先后以同样的参数值对SetReadDeadline和SetWriteDeadline方法的调用。若想统一设置则使用SetDeadline,细操作则可用后面两个方法，后两个方法仅针对当前连接值得I/O操作。
 
