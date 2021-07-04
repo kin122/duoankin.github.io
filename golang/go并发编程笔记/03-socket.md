@@ -14,4 +14,14 @@ socket通讯有无连接：
 * 数据传输的有序性和可靠性与socket是否面向连接有很大的关系
 * sock_raw类型的socket提供了一个可以直接通过底层传输数据得方法。为了保证安全性，应用程序必须具有操作系统的超级用户权限才能使用，此方法成本也较高，一般很少使用。
 
-系统调用socket的时候
+系统调用socket的时候，一般以0作为它的第三个参数，也就是说socket的所用协议以通信域和类型默认决定，一般通信域为net的会根据类型决定调用那种网络协议，通信域为unix的则是决定是否有效（*有效则表示系统内核使用内部的socket协议*）。  
+* 在网络协议中，各个类型对应的协议关系如下：SOCK_DGRAM-UDP;SOCK_RAM-IPv4/IPv6;SOCK_SEQPACKET-SCTP;SOCK_STREAM-TCP/SCTP
+* unix通信域中，除了SOCK_RAW是无效外都有效
+
+socket方法的返回值是socket实例唯一标识符的文件描述符，一旦得到对应的标识符，就可以调用其他系统调用来进行各种相关操作，比如绑定和监听端口、发送或者接收数据等等。  
+socket接口和TCP/IP协议栈一样是linux系统内核的一部分。  
+在程序使用中，socket的调用链如下：应用层的应用程序调用socket接口，socket调用传输层的tcp/udp/sctp的协议，再调用网络互联层的IP  
+此处主要实现了基于TCP的客户端和服务端通过socket接口建立tcp连接并进行通信的情形。
+![基于TCP协议栈的socket通信流程](https://github.com/kin122/duoankin.github.io/blob/main/golang/go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E5%9F%BA%E4%BA%8ETCP%E5%8D%8F%E8%AE%AE%E6%A0%88%E7%9A%84socket%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B.webp)
+
+
