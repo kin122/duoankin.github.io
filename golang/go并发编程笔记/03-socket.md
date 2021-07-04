@@ -37,7 +37,7 @@ socket接口和TCP/IP协议栈一样是linux系统内核的一部分。
 `conn,err:=Listener.Accept()`  
 调用Accept方法时，流程会被阻塞，知道某个客户端程序与当前程序建立tcp连接。Accept方法返回两个结果值，第一个代表当前TCP连接的net.Conn类型，第二个依旧是error
 
-`func Dial(network,address string)(Conn,error)` 
+`func Dial(network,address string)(Conn,error)`   
 Dial函数用于向指定的网络地址发送链接建立申请，network参数和net.Listen函数的第一个参数net的含义类似，但是比后者拥有更多的可选值。第二个参数就是IP:PORT，只是此处是远程地址。Dial函数用于客户端连接建立。其代码类似于`conn,err:=net.Dial("tcp","127.0.0.1:8085")`    
 
 `func DialTimeout(network,address string,timeout time.Duration)(Conn,error)`  
